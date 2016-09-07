@@ -1,0 +1,23 @@
+CM A vertical dipole array, 2 element
+CM 		
+CM 
+CM 
+CM 
+CM 
+CE
+SY wavelength=19.9867
+SY len=wavelength/2	'Symbol: Length for WL/2
+SY height1=0
+SY height2=0
+SY segLen=21
+SY dist = wavelength*0.5
+GW	1	segLen	0	0	height1 - Len/2	0	0	height1 + Len/2	.00005
+GW	2	segLen	dist	0	height2 - Len/2	dist	0	height2 + Len/2	.00005
+GE	0
+GN	-1
+EK
+EX	0	2	(segLen-1)/2+1	0	1	0	0
+EX	0	1	(segLen-1)/2+1	0	1	0	0
+NT	1	(segLen-1)/2+1	2	(segLen-1)/2+1
+FR	0	0	0	0	15.01	0
+EN
